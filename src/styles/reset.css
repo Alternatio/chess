@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: IBM3270;
+}
+
+html {
+  font-size: 20px;
+}
+
+#root {
+  width: 100%;
+}
+
+::selection {
+  background: #fff;
+  color: #111;
+}

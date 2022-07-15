@@ -1,0 +1,46 @@
+.Board {
+  height: 100%;
+  aspect-ratio: 1/1;
+  background: #fff;
+  position: relative;
+}
+.background {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+.figures {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.figuresContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.coordinate {
+  background: #111;
+  color: #fff;
+  font-size: .75rem;
+}
+
+.cell {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.cell::selection {
+  background: #111;
+  color: #fff;
+}
+
+.cellBlack {
+  background: #ccc;
+}

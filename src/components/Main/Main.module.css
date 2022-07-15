@@ -1,0 +1,9 @@
+.Main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  width: min(100%, 70rem);
+  height: 80vh;
+}
