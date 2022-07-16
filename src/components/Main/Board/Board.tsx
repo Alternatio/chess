@@ -4,16 +4,27 @@ import { motion } from 'framer-motion'
 import style from './Board.module.css'
 
 import Figure from './Figure/Figure'
+import arrayOfFigures from './ArrayOfFigureData'
 
 const Board: React.FC = () => {
-
   return (
     <div className={style.Board}>
       <div className={style.figures}>
+        {/* figures board */}
         <div className={style.figuresContainer}>
-          <Figure />
+          {arrayOfFigures.map((value, index) => {
+            return (
+              <Figure 
+              indexOfFigure={index}
+              idFigure={arrayOfFigures[index].idFigure}
+              xPosOfFigure={arrayOfFigures[index].xPosOfFigure}
+              yPosOfFigure={arrayOfFigures[index].yPosOfFigure}
+              />
+            )
+          })}
         </div>
       </div>
+      {/* background board */}
       <div className={style.background}>
         {setCells()}
       </div>
@@ -32,14 +43,16 @@ const setCells: Function = () => {
       ? fillArray.push(
         <div className={style.cellWhite + " " + style.cell}>
           <span className={style.coordinate}>
-            {coordNumbers[i] + coordLetters[j]}
+            {i == 7 ? coordLetters[j] : false}
+            {j == 7 ? coordNumbers[i] : false}
           </span>
         </div>
       ) 
       : fillArray.push(
         <div className={style.cellBlack + " " + style.cell}>
           <span className={style.coordinate}>
-            {coordNumbers[i] + coordLetters[j]}
+            { i == 7 ? coordLetters[j] : false}
+            {j == 7 ? coordNumbers[i] : false}
           </span>
         </div>
       )

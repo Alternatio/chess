@@ -1,0 +1,17 @@
+.Figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 7vh;
+  overflow: hidden;
+  /* cursor: pointer; */
+  user-select: none;
+}
+/* .Figure:hover {
+  background: #aa03;
+}
+.Figure[content="true"] {
+  background: #0a03;
+} */
